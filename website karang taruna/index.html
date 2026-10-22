@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Website resmi Karang Taruna RW 013 Perumahan Kodam Mustikajaya, Kota Bekasi. Kenali profil, kegiatan, program, dan kontribusi pemuda untuk masyarakat.">
+
+  <meta name="theme-color" content="#0a0a0a">
+
+  <title>Karang Taruna RW 013 | Bersama Bertumbuh, Bersama Berdampak</title>
+
+  <style>
+
+    :root {
+
+      --black: #090909;
+
+      --dark: #111111;
+
+      --card: #171717;
+
+      --gold: #d6b45a;
+
+      --white: #f6f4ee;
+
+      --muted: #b9b7b0;
+
+      --line: #303030;
+
+    }
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      background: var(--black);
+
+      color: var(--white);
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      line-height: 1.8;
+
+    }
+
+    a {
+
+      color: inherit;
+
+    }
+
+    img {
+
+      max-width: 100%;
+
+    }
+
+    .container {
+
+      width: min(1120px, 88%);
+
+      margin: auto;
+
+    }
+
+    .topbar {
+
+      padding: 9px 0;
+
+      text-align: center;
+
+      background: var(--gold);
+
+      color: #17130a;
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+
+    }
+
+    header {
+
+      background: rgba(9, 9, 9, .96);
+
+      border-bottom: 1px solid var(--line);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+      backdrop-filter: blur(12px);
+
+    }
+
+    .navbar {
+
+      min-height: 84px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 24px;
+
+    }
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      text-decoration: none;
+
+    }
+
+    .brand img {
+
+      width: 53px;
+
+      height: 53px;
+
+      object-fit: contain;
+
+    }
+
+    .brand-name {
+
+      color: var(--gold);
+
+      font-size: 15px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      line-height: 1.4;
+
+    }
+
+    .brand small {
+
+      display: block;
+
+      color: #aaa;
+
+      font-size: 10px;
+
+      font-weight: normal;
+
+      letter-spacing: 0;
+
+      margin-top: 4px;
+
+    }
+
+    nav {
+
+      display: flex;
+
+      gap: 23px;
+
+      flex-wrap: wrap;
+
+    }
+
+    nav a {
+
+      color: #ddd;
+
+      text-decoration: none;
+
+      font-size: 12px;
+
+      transition: .25s;
+
+    }
+
+    nav a:hover {
+
+      color: var(--gold);
+
+    }
+
+    .hero {
+
+      min-height: 650px;
+
+      display: flex;
+
+      align-items: center;
+
+      background:
+
+        radial-gradient(ellipse at 85% 20%, #45381c 0%, transparent 33%),
+
+        linear-gradient(120deg, #101010, #080808 75%);
+
+      border-bottom: 1px solid var(--line);
+
+      padding: 100px 0;
+
+    }
+
+    .hero-content {
+
+      max-width: 820px;
+
+    }
+
+    .eyebrow {
+
+      color: var(--gold);
+
+      font-size: 11px;
+
+      font-weight: bold;
+
+      text-transform: uppercase;
+
+      letter-spacing: 4px;
+
+    }
+
+    h1 {
+
+      font-size: clamp(40px, 6vw, 72px);
+
+      line-height: 1.12;
+
+      margin: 23px 0;
+
+      letter-spacing: -2px;
+
+    }
+
+    h1 span,
+
+    .gold {
+
+      color: var(--gold);
+
+    }
+
+    .hero p {
+
+      max-width: 700px;
+
+      color: #c7c5be;
+
+      font-size: 16px;
+
+      margin-bottom: 30px;
+
+    }
+
+    .actions {
+
+      display: flex;
+
+      gap: 13px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .btn {
+
+      display: inline-block;
+
+      padding: 13px 22px;
+
+      border-radius: 4px;
+
+      background: var(--gold);
+
+      color: #14110a;
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      text-decoration: none;
+
+      transition: .25s;
+
+    }
+
+    .btn:hover {
+
+      background: #f0d782;
+
+      transform: translateY(-2px);
+
+    }
+
+    .btn-outline {
+
+      color: var(--white);
+
+      background: transparent;
+
+      border: 1px solid #777;
+
+    }
+
+    .btn-outline:hover {
+
+      color: var(--gold);
+
+      background: #171717;
+
+    }
+
+    section {
+
+      padding: 90px 0;
+
+      scroll-margin-top: 90px;
+
+    }
+
+    .section-heading {
+
+      max-width: 750px;
+
+      margin: 0 auto 45px;
+
+      text-align: center;
+
+    }
+
+    .section-heading .eyebrow {
+
+      letter-spacing: 3px;
+
+    }
+
+    h2 {
+
+      font-size: clamp(29px, 4vw, 42px);
+
+      line-height: 1.25;
+
+      margin: 13px 0 17px;
+
+    }
+
+    .section-heading p,
+
+    .muted {
+
+      color: var(--muted);
+
+    }
+
+    .rule {
+
+      width: 58px;
+
+      height: 3px;
+
+      background: var(--gold);
+
+      margin: 20px auto 0;
+
+    }
+
+    .about {
+
+      background: #101010;
+
+    }
+
+    .about-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 45px;
+
+      align-items: center;
+
+    }
+
+    .about-copy h2 {
+
+      margin-bottom: 20px;
+
+    }
+
+    .about-copy p {
+
+      color: var(--muted);
+
+      margin-bottom: 17px;
+
+    }
+
+    .quote {
+
+      border-left: 3px solid var(--gold);
+
+      padding: 18px 22px;
+
+      margin-top: 25px;
+
+      background: #191919;
+
+      color: #eee;
+
+      font-style: italic;
+
+    }
+
+    .about-panel {
+
+      background: linear-gradient(145deg, #242016, #151515 60%);
+
+      border: 1px solid #49402a;
+
+      border-radius: 12px;
+
+      padding: 35px;
+
+    }
+
+    .about-panel .big-number {
+
+      font-size: 50px;
+
+      color: var(--gold);
+
+      font-weight: bold;
+
+      line-height: 1.2;
+
+    }
+
+    .about-panel h3 {
+
+      margin: 12px 0;
+
+      font-size: 23px;
+
+    }
+
+    .about-panel p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+    }
+
+    .panel-line {
+
+      height: 1px;
+
+      background: #49402a;
+
+      margin: 23px 0;
+
+    }
+
+    .vision {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 22px;
+
+    }
+
+    .vision-card,
+
+    .card {
+
+      background: var(--card);
+
+      border: 1px solid var(--line);
+
+      border-radius: 10px;
+
+      padding: 28px;
+
+      transition: .3s;
+
+    }
+
+    .vision-card:hover,
+
+    .card:hover {
+
+      border-color: var(--gold);
+
+      transform: translateY(-4px);
+
+    }
+
+    .vision-card h3,
+
+    .card h3 {
+
+      color: var(--gold);
+
+      font-size: 20px;
+
+      margin: 12px 0;
+
+    }
+
+    .vision-card p,
+
+    .card p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+    }
+
+    .symbol {
+
+      font-size: 28px;
+
+    }
+
+    .mission-list {
+
+      padding-left: 20px;
+
+      color: var(--muted);
+
+    }
+
+    .mission-list li {
+
+      margin: 10px 0;
+
+    }
+
+    .programs {
+
+      background: #101010;
+
+    }
+
+    .program-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+
+    }
+
+    .program-number {
+
+      font-size: 12px;
+
+      color: #777;
+
+      letter-spacing: 2px;
+
+    }
+
+    .program-tag {
+
+      display: inline-block;
+
+      margin-top: 18px;
+
+      padding: 4px 10px;
+
+      color: var(--gold);
+
+      background: #292315;
+
+      border-radius: 30px;
+
+      font-size: 10px;
+
+      letter-spacing: 1px;
+
+    }
+
+    .commitment {
+
+      background:
+
+        radial-gradient(ellipse at top right, #3a3019, transparent 45%),
+
+        #090909;
+
+      text-align: center;
+
+    }
+
+    .commitment p {
+
+      max-width: 760px;
+
+      color: var(--muted);
+
+      margin: 0 auto 25px;
+
+    }
+
+    .gallery-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+
+    }
+
+    .gallery-item {
+
+      overflow: hidden;
+
+      background: var(--card);
+
+      border: 1px solid var(--line);
+
+      border-radius: 9px;
+
+    }
+
+    .gallery-item img {
+
+      width: 100%;
+
+      height: 220px;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: .4s;
+
+    }
+
+    .gallery-item:hover img {
+
+      transform: scale(1.04);
+
+    }
+
+    .gallery-caption {
+
+      padding: 15px;
+
+    }
+
+    .gallery-caption h3 {
+
+      color: var(--gold);
+
+      font-size: 15px;
+
+      margin-bottom: 4px;
+
+    }
+
+    .gallery-caption p {
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+    }
+
+    .join {
+
+      background: #101010;
+
+    }
+
+    .join-box {
+
+      padding: 45px;
+
+      text-align: center;
+
+      border: 1px solid #514529;
+
+      border-radius: 12px;
+
+      background: linear-gradient(140deg, #211d13, #141414);
+
+    }
+
+    .join-box p {
+
+      color: var(--muted);
+
+      max-width: 760px;
+
+      margin: 0 auto 25px;
+
+    }
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 20px;
+
+    }
+
+    .contact-card {
+
+      padding: 25px;
+
+      background: var(--card);
+
+      border: 1px solid var(--line);
+
+      border-radius: 9px;
+
+    }
+
+    .contact-card h3 {
+
+      color: var(--gold);
+
+      margin-bottom: 8px;
+
+    }
+
+    .contact-card p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+    }
+
+    footer {
+
+      background: #050505;
+
+      border-top: 1px solid var(--line);
+
+      padding: 35px 0;
+
+      text-align: center;
+
+    }
+
+    footer strong {
+
+      color: var(--gold);
+
+    }
+
+    footer p {
+
+      color: #999;
+
+      font-size: 12px;
+
+      margin: 5px 0;
+
+    }
+
+    .back-top {
+
+      display: inline-block;
+
+      margin-top: 14px;
+
+      color: var(--gold);
+
+      text-decoration: none;
+
+      font-size: 12px;
+
+    }
+
+    @media (max-width: 850px) {
+
+      .navbar {
+
+        padding: 15px 0;
+
+        flex-direction: column;
+
+      }
+
+      nav {
+
+        justify-content: center;
+
+        gap: 13px;
+
+      }
+
+      .about-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .program-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      .gallery-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+    }
+
+    @media (max-width: 560px) {
+
+      .container {
+
+        width: 90%;
+
+      }
+
+      .hero {
+
+        min-height: auto;
+
+        padding: 80px 0;
+
+      }
+
+      h1 {
+
+        letter-spacing: -1px;
+
+      }
+
+      section {
+
+        padding: 65px 0;
+
+      }
+
+      .vision,
+
+      .program-grid,
+
+      .gallery-grid,
+
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .about-panel,
+
+      .join-box {
+
+        padding: 25px;
+
+      }
+
+      .gallery-item img {
+
+        height: 230px;
+
+      }
+
+      .topbar {
+
+        font-size: 10px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+
+    PEMUDA BERGERAK • MASYARAKAT KUAT • MASA DEPAN HEBAT
+
+  </div>
+
+  <header>
+
+    <div class="container navbar">
+
+      <a href="#beranda" class="brand">
+
+        <img src="images/kaartar.jpeg"
+
+             alt="Logo Karang Taruna RW 013">
+
+        <div class="brand-name">
+
+          KARANG TARUNA RW 013
+
+          <small>PERUM KODAM MUSTIKAJAYA</small>
+
+        </div>
+
+      </a>
+
+      <nav>
+
+        <a href="#beranda">Beranda</a>
+
+        <a href="#profil">Profil</a>
+
+        <a href="#visi">Visi & Misi</a>
+
+        <a href="#program">Program</a>
+
+        <a href="#galeri">Galeri</a>
+
+        <a href="#kontak">Kontak</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- BERANDA -->
+
+    <section class="hero" id="beranda">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">Ruang Tumbuh Generasi Muda</div>
+
+          <h1>
+
+            Bukan Sekadar Organisasi,<br>
+
+            Tetapi <span>Tempat Bertumbuh.</span>
+
+          </h1>
+
+          <p>
+
+            Selamat datang di website Karang Taruna RW 013 Perumahan
+
+            Kodam Mustikajaya, Kota Bekasi. Kami hadir sebagai ruang
+
+            bagi generasi muda untuk saling mengenal, belajar, berkarya,
+
+            dan bergerak bersama. Dengan semangat kebersamaan, kami
+
+            percaya bahwa setiap anak muda memiliki potensi untuk
+
+            membawa perubahan positif bagi lingkungan dan masyarakat.
+
+          </p>
+
+          <div class="actions">
+
+            <a class="btn" href="#profil">Kenali Organisasi Kami ↗️</a>
+
+            <a class="btn btn-outline" href="#program">Jelajahi Program</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROFIL -->
+
+    <section class="about" id="profil">
+
+      <div class="container about-grid">
+
+        <div class="about-copy">
+
+          <div class="eyebrow">Siapa Kami?</div>
+
+          <h2>Mengenal Lebih Dekat <span class="gold">Karang Taruna RW 013</span></h2>
+
+          <p>
+
+            Karang Taruna RW 013 Perumahan Kodam Mustikajaya merupakan
+
+            wadah kebersamaan generasi muda di lingkungan RW 013 yang
+
+            bertujuan mendorong partisipasi pemuda dalam kegiatan sosial,
+
+            kemasyarakatan, pengembangan potensi, dan pembangunan
+
+            lingkungan. Kami ingin menjadikan masa muda sebagai waktu
+
+            yang bermakna, bukan hanya untuk berkembang secara pribadi,
+
+            tetapi juga untuk memberikan manfaat kepada orang lain.
+
+          </p>
+
+          <p>
+
+            Bagi kami, organisasi bukan sekadar nama, jabatan, atau
+
+            kumpulan orang yang menjalankan acara. Organisasi adalah
+
+            tempat untuk belajar bertanggung jawab, membangun komunikasi,
+
+            menghargai perbedaan pendapat, melatih kepemimpinan, dan
+
+            menciptakan pengalaman yang tidak selalu bisa didapatkan
+
+            di ruang belajar formal. Di sini, setiap ide memiliki
+
+            kesempatan untuk didengar dan setiap kontribusi memiliki
+
+            arti bagi perjalanan bersama.
+
+          </p>
+
+          <p>
+
+            Melalui berbagai kegiatan yang direncanakan secara bersama,
+
+            kami berupaya menumbuhkan generasi muda yang kreatif,
+
+            peduli, aktif, dan mampu bekerja sama. Kami juga ingin
+
+            membangun hubungan yang baik dengan masyarakat agar
+
+            kegiatan kepemudaan dapat menjadi bagian dari kehidupan
+
+            lingkungan yang lebih hangat, kompak, dan harmonis.
+
+          </p>
+
+          <div class="quote">
+
+            "Perubahan tidak selalu dimulai dari langkah besar.
+
+            Terkadang, perubahan dimulai dari sekelompok anak muda
+
+            yang bersedia peduli dan melakukan sesuatu bersama."
+
+          </div>
+
+        </div>
+
+        <div class="about-panel">
+
+          <div class="big-number">013</div>
+
+          <h3>Satu Lingkungan, Banyak Potensi</h3>
+
+          <p>
+
+            Kami percaya bahwa kekuatan sebuah organisasi tidak hanya
+
+            dilihat dari banyaknya kegiatan yang diselenggarakan,
+
+            tetapi juga dari hubungan yang dibangun, kepedulian yang
+
+            ditumbuhkan, dan manfaat yang dirasakan masyarakat.
+
+          </p>
+
+          <div class="panel-line"></div>
+
+          <h3>Tempat untuk Berkontribusi</h3>
+
+          <p>
+
+            Setiap orang memiliki kemampuan, pengalaman, dan gagasan
+
+            yang berbeda. Ketika semuanya dipertemukan dalam semangat
+
+            kerja sama, perbedaan tersebut dapat menjadi kekuatan
+
+            untuk menghasilkan kegiatan yang lebih baik dan bermanfaat.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- VISI MISI -->
+
+    <section id="visi">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">Arah dan Tujuan</div>
+
+          <h2>Melangkah dengan Tujuan,<br><span class="gold">Bertumbuh dengan Kebersamaan</span></h2>
+
+          <p>
+
+            Setiap langkah organisasi membutuhkan arah yang jelas.
+
+            Visi dan misi menjadi pegangan kami untuk terus belajar,
+
+            berkembang, dan menghadirkan kegiatan yang berarti.
+
+          </p>
+
+          <div class="rule"></div>
+
+        </div>
+
+        <div class="vision">
+
+          <div class="vision-card">
+
+            <div class="symbol">✦</div>
+
+            <h3>Visi Kami</h3>
+
+            <p>
+
+              Mewujudkan Karang Taruna RW 013 sebagai organisasi
+
+              kepemudaan yang aktif, kreatif, solid, dan peduli terhadap
+
+              masyarakat; menjadi ruang tumbuh bagi generasi muda untuk
+
+              mengembangkan potensi, mempererat persaudaraan, serta
+
+              berkontribusi dalam menciptakan lingkungan yang harmonis,
+
+              produktif, dan penuh semangat kebersamaan.
+
+            </p>
+
+          </div>
+
+          <div class="vision-card">
+
+            <div class="symbol">✧</div>
+
+            <h3>Misi Kami</h3>
+
+            <ul class="mission-list">
+
+              <li>Mempererat hubungan dan rasa kekeluargaan antar pemuda serta masyarakat.</li>
+
+              <li>Mendorong kreativitas, keberanian berpendapat, dan pengembangan potensi generasi muda.</li>
+
+              <li>Menyelenggarakan kegiatan sosial, olahraga, budaya, dan kemasyarakatan yang positif.</li>
+
+              <li>Menumbuhkan kepedulian terhadap kebersihan, keamanan, dan kenyamanan lingkungan.</li>
+
+              <li>Membangun kerja sama yang baik dengan pengurus lingkungan, warga, dan berbagai pihak.</li>
+
+              <li>Mengembangkan organisasi yang terbuka, bertanggung jawab, dan mengutamakan kebersamaan.</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- NILAI -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">Prinsip Kami</div>
+
+          <h2>Nilai yang Menyatukan Kami</h2>
+
+          <p>
+
+            Bukan hanya tentang apa yang kami lakukan, tetapi juga
+
+            bagaimana kami bekerja, memperlakukan sesama, dan menjaga
+
+            kepercayaan yang telah diberikan.
+
+          </p>
+
+          <div class="rule"></div>
+
+        </div>
+
+        <div class="program-grid">
+
+          <div class="card">
+
+            <div class="symbol">🤝</div>
+
+            <h3>Kebersamaan</h3>
+
+            <p>
+
+              Membangun hubungan yang kuat dengan saling membantu,
+
+              menghargai perbedaan, dan mengutamakan kepentingan bersama
+
+              tanpa meninggalkan rasa hormat kepada setiap individu.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <div class="symbol">💡</div>
+
+            <h3>Kreativitas</h3>
+
+            <p>
+
+              Memberi ruang bagi ide baru, keberanian mencoba,
+
+              dan kemampuan anak muda untuk mengubah gagasan menjadi
+
+              kegiatan yang nyata, menarik, dan bermanfaat.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <div class="symbol">🌱</div>
+
+            <h3>Kepedulian</h3>
+
+            <p>
+
+              Menumbuhkan kepekaan terhadap keadaan sekitar serta
+
+              menjadikan kepedulian sosial dan lingkungan sebagai
+
+              bagian dari kebiasaan, bukan hanya kegiatan sesaat.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROGRAM -->
+
+    <section class="programs" id="program">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">Program dan Kegiatan</div>
+
+          <h2>Ruang Aksi untuk <span class="gold">Ide dan Potensi</span></h2>
+
+          <p>
+
+            Program Karang Taruna menjadi ruang bagi pemuda untuk
+
+            mengembangkan kemampuan, memperluas pengalaman, dan
+
+            menciptakan momen yang mempererat hubungan antarwarga.
+
+            Setiap program dapat berkembang sesuai kebutuhan dan
+
+            kesepakatan bersama.
+
+          </p>
+
+          <div class="rule"></div>
+
+        </div>
+
+        <div class="program-grid">
+
+          <div class="card">
+
+            <div class="program-number">PROGRAM 01</div>
+
+            <div class="symbol">🇮🇩</div>
+
+            <h3>Perayaan Hari Kemerdekaan</h3>
+
+            <p>
+
+              Menghadirkan perayaan kemerdekaan yang tidak hanya meriah,
+
+              tetapi juga menjadi kesempatan untuk mempererat persaudaraan.
+
+              Melalui perlombaan, karnaval budaya, hiburan, dan kegiatan
+
+              bersama, kami ingin menumbuhkan sportivitas, kreativitas,
+
+              rasa bangga terhadap Indonesia, serta semangat gotong royong
+
+              di tengah masyarakat.
+
+            </p>
+
+            <span class="program-tag">NASIONALISME</span>
+
+          </div>
+
+          <div class="card">
+
+            <div class="program-number">PROGRAM 02</div>
+
+            <div class="symbol">🏆</div>
+
+            <h3>Olahraga dan Sportivitas</h3>
+
+            <p>
+
+              Menjadikan olahraga sebagai sarana menjaga kebugaran,
+
+              melatih disiplin, membangun kekompakan, dan mempertemukan
+
+              warga dalam suasana positif. Berbagai kegiatan olahraga
+
+              dapat menjadi ruang untuk menunjukkan kemampuan sekaligus
+
+              belajar menghargai lawan, menerima hasil pertandingan,
+
+              dan menjaga persahabatan.
+
+            </p>
+
+            <span class="program-tag">SPORTIVITAS</span>
+
+          </div>
+
+          <div class="card">
+
+            <div class="program-number">PROGRAM 03</div>
+
+            <div class="symbol">🌿</div>
+
+            <h3>Sosial dan Lingkungan</h3>
+
+            <p>
+
+              Mendorong kepedulian melalui kegiatan kebersihan lingkungan,
+
+              gotong royong, bantuan sosial, serta kegiatan kemasyarakatan
+
+              lainnya sesuai kebutuhan. Kami ingin membangun kesadaran
+
+              bahwa lingkungan yang nyaman tidak tercipta dengan sendirinya,
+
+              melainkan melalui perhatian dan tindakan nyata bersama.
+
+            </p>
+
+            <span class="program-tag">KEPEDULIAN</span>
+
+          </div>
+
+          <div class="card">
+
+            <div class="program-number">PROGRAM 04</div>
+
+            <div class="symbol">🎨</div>
+
+            <h3>Kreativitas dan Budaya</h3>
+
+            <p>
+
+              Membuka kesempatan bagi generasi muda untuk menampilkan
+
+              bakat seni, musik, tari, desain, dan berbagai kreativitas
+
+              lainnya. Kegiatan budaya juga menjadi cara untuk mengenal
+
+              keberagaman Indonesia, menghargai tradisi, serta memberikan
+
+              ruang bagi anak muda untuk berkarya dan percaya diri.
+
+            </p>
+
+            <span class="program-tag">KREATIVITAS</span>
+
+          </div>
+
+          <div class="card">
+
+            <div class="program-number">PROGRAM 05</div>
+
+            <div class="symbol">📚</div>
+
+            <h3>Pengembangan Pemuda</h3>
+
+            <p>
+
+              Mendorong pembelajaran bersama dalam bidang kepemimpinan,
+
+              komunikasi, teknologi, kewirausahaan, dan keterampilan
+
+              organisasi. Kami ingin kegiatan kepemudaan menjadi
+
+              pengalaman yang membantu anggota bertumbuh, belajar
+
+              bertanggung jawab, dan lebih siap menghadapi tantangan.
+
+            </p>
+
+            <span class="program-tag">PENGEMBANGAN DIRI</span>
+
+          </div>
+
+          <div class="card">
+
+            <div class="program-number">PROGRAM 06</div>
+
+            <div class="symbol">📣</div>
+
+            <h3>Informasi dan Dokumentasi</h3>
+
+            <p>
+
+              Memanfaatkan media digital untuk memperkenalkan organisasi,
+
+              menyampaikan informasi kegiatan, mendokumentasikan perjalanan,
+
+              dan membagikan cerita positif dari lingkungan RW 013.
+
+              Dengan dokumentasi yang tertata, masyarakat dapat mengikuti
+
+              perkembangan organisasi dengan lebih mudah dan terbuka.
+
+            </p>
+
+            <span class="program-tag">DIGITALISASI</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- KOMITMEN -->
+
+    <section class="commitment">
+
+      <div class="container">
+
+        <div class="eyebrow">Komitmen Kami</div>
+
+        <h2>Bertumbuh Bukan Sendiri,<br><span class="gold">Berkembang Bersama</span></h2>
+
+        <p>
+
+          Kami menyadari bahwa membangun organisasi yang baik adalah
+
+          perjalanan yang membutuhkan waktu, komitmen, komunikasi,
+
+          dan kemauan untuk terus belajar. Tidak semua hal harus dimulai
+
+          dengan sempurna. Yang terpenting adalah adanya niat untuk
+
+          bergerak, keberanian untuk mencoba, dan kesediaan untuk
+
+          memperbaiki diri bersama-sama.
+
+        </p>
+
+        <p>
+
+          Karang Taruna RW 013 ingin menjadi bagian dari cerita baik
+
+          di lingkungan ini. Melalui ide, tenaga, waktu, dan kepedulian
+
+          yang diberikan setiap anggota, kami berharap dapat menciptakan
+
+          kegiatan yang bukan hanya dikenang, tetapi juga membawa
+
+          manfaat dan memperkuat rasa memiliki terhadap lingkungan.
+
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- GALERI -->
+
+    <section id="galeri">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">Cerita dalam Dokumentasi</div>
+
+          <h2>Jejak Kegiatan Kami</h2>
+
+          <p>
+
+            Setiap foto menyimpan cerita tentang usaha, kebersamaan,
+
+            dan proses yang kami lalui. Galeri ini menjadi tempat untuk
+
+            mengenang kegiatan sekaligus memperkenalkan semangat
+
+            Karang Taruna kepada masyarakat yang lebih luas.
+
+          </p>
+
+          <div class="rule"></div>
+
+        </div>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+
+            <img src="images/kegiatan 2 kartar.jpeg" alt="Dokumentasi kegiatan Karang Taruna" loading="lazy">
+
+            <div class="gallery-caption">
+
+              <h3>Kebersamaan Pemuda</h3>
+
+              <p>Membangun hubungan melalui kegiatan bersama.</p>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-item">
+
+            <img src="images/kegiatan 1 katar.jpeg" alt="Kegiatan bersama warga" loading="lazy">
+
+            <div class="gallery-caption">
+
+              <h3>Partisipasi Warga</h3>
+
+              <p>Bergerak bersama untuk lingkungan yang lebih baik.</p>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-item">
+
+            <img src="images/kegiatan katar 5.jpeg" alt="Aktivitas organisasi pemuda" loading="lazy">
+
+            <div class="gallery-caption">
+
+              <h3>Aktivitas Organisasi</h3>
+
+              <p>Belajar bekerja sama dan bertanggung jawab.</p>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-item">
+
+            <img src="images/kegiatan katar 4.jpeg" alt="Kegiatan olahraga" loading="lazy">
+
+            <div class="gallery-caption">
+
+              <h3>Semangat Sportivitas</h3>
+
+              <p>Berkompetisi dengan tetap menjaga persaudaraan.</p>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-item">
+
+            <img src="images/kegiatan katar 6.jpeg" alt="Perayaan kegiatan lingkungan" loading="lazy">
+
+            <div class="gallery-caption">
+
+              <h3>Momen Perayaan</h3>
+
+              <p>Menciptakan kenangan dan pengalaman bersama.</p>
+
+            </div>
+
+          </div>
+
+          <div class="gallery-item">
+
+            <img src="images/kegiatan katar 7.jpeg" alt="Dokumentasi kebersamaan" loading="lazy">
+
+            <div class="gallery-caption">
+
+              <h3>Kenangan Bersama</h3>
+
+              <p>Setiap kontribusi menjadi bagian dari cerita kami.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- AJAKAN BERGABUNG -->
+
+    <section class="join">
+
+      <div class="container">
+
+        <div class="join-box">
+
+          <div class="eyebrow">Kamu Bagian dari Perubahan</div>
+
+          <h2>Setiap Anak Muda Punya <span class="gold">Peran</span></h2>
+
+          <p>
+
+            Kami percaya bahwa kontribusi tidak harus selalu berupa
+
+            sesuatu yang besar. Ide sederhana, kemauan membantu,
+
+            kemampuan yang dibagikan, atau kesediaan untuk hadir
+
+            dalam kegiatan dapat menjadi awal dari perubahan yang berarti.
+
+            Karang Taruna adalah ruang untuk belajar bersama, mencoba
+
+            hal baru, memperluas pertemanan, dan tumbuh melalui pengalaman.
+
+          </p>
+
+          <p>
+
+            Mari ikut mengenal, mendukung, dan mengembangkan kegiatan
+
+            positif di lingkungan RW 013. Bersama-sama, kita dapat
+
+            membangun lingkungan yang lebih kompak, peduli, kreatif,
+
+            dan memberi kesempatan bagi generasi muda untuk berkembang.
+
+          </p>
+
+          <a href="#kontak" class="btn">Mari Terhubung ↗️</a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- KONTAK -->
+
+    <section id="kontak">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">Hubungi Kami</div>
+
+          <h2>Mari Bangun <span class="gold">Komunikasi</span></h2>
+
+          <p>
+
+            Punya saran, ide kegiatan, peluang kerja sama, atau ingin
+
+            mengetahui lebih jauh tentang Karang Taruna RW 013?
+
+            Kami terbuka untuk membangun komunikasi dan kolaborasi
+
+            yang positif bersama masyarakat.
+
+          </p>
+
+          <div class="rule"></div>
+
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <div class="symbol">📍</div>
+
+            <h3>Lokasi Organisasi</h3>
+
+            <p>
+
+              Perumahan Kodam Mustikajaya,<br>
+
+              Kelurahan Mustikajaya, Kecamatan Mustika Jaya,<br>
+
+              Kota Bekasi, Jawa Barat.
+
+            </p>
+
+          </div>
+
+          <div class="contact-card">
+
+            <div class="symbol">✉️</div>
+
+            <h3>Informasi dan Kerja Sama</h3>
+
+            <p>
+
+              Untuk informasi kegiatan, usulan program, atau kerja sama,
+
+              silakan hubungi pengurus Karang Taruna RW 013 melalui
+
+              kontak  resmi organisasi yang akan dicantumkan di halaman ini.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container">
+
+      <p><strong>KARANG TARUNA RW 013</strong></p>
+
+      <p>Perumahan Kodam Mustikajaya · Kota Bekasi</p>
+
+      <p>Bersama Bertumbuh, Bersama Berdampak.</p>
+
+      <p>© 2026 Karang Taruna RW 013. Hak cipta dilindungi.</p>
+
+      <a class="back-top" href="#beranda">Kembali ke atas ↑</a>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
