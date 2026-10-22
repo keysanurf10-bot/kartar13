@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karang Taruna RW 013 | Mustikajaya</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #080808;
+    --card: #141414;
+    --gold: #d6b36a;
+    --white: #ffffff;
+    --gray: #b0b0b0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.7;
+}
+
+header {
+    background: rgba(8, 8, 8, 0.96);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+section {
+    padding: 80px 8%;
+    scroll-margin-top: 75px;
+}
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+    linear-gradient(90deg, rgba(0,0,0,.96), rgba(0,0,0,.65)),
+    radial-gradient(circle at 80% 30%, #38301e, #080808 60%);
+}
+
+.label {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 76px);
+    line-height: 1.15;
+    margin: 20px 0;
+    max-width: 900px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: var(--gray);
+    max-width: 680px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: #080808;
+    padding: 12px 23px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.button:hover {
+    background: white;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 42px);
+    margin: 10px 0 20px;
+}
+
+.section-desc {
+    color: var(--gray);
+    max-width: 780px;
+    margin-bottom: 35px;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.about-grid,
+.program-grid,
+.value-grid,
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 25px;
+    transition: .3s;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.card p,
+.card li {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.card ul {
+    padding-left: 18px;
+}
+
+.dark-section {
+    background: #101010;
+}
+
+.quote {
+    border-left: 3px solid var(--gold);
+    padding: 20px;
+    margin-top: 30px;
+    background: #141414;
+    color: #ddd;
+    font-style: italic;
+}
+
+/* STRUKTUR KEPENGURUSAN */
+
+.structure-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.structure-heading h2 {
+    font-size: clamp(25px, 4vw, 40px);
+    margin: 10px 0;
+}
+
+.structure-heading p {
+    color: var(--gray);
+}
+
+.org-group {
+    margin-bottom: 38px;
+}
+
+.org-group-title {
+    color: var(--gold);
+    font-size: 19px;
+    border-bottom: 1px solid #3b3322;
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+}
+
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 15px;
+}
+
+.person {
+    background: #151515;
+    border: 1px solid #292929;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.person .position {
+    color: var(--gold);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.person h4 {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+.person p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.person-list {
+    background: #151515;
+    border: 1px solid #292929;
+    padding: 22px;
+    border-radius: 8px;
+}
+
+.person-list h4 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.person-list ul {
+    list-style: none;
+}
+
+.person-list li {
+    color: #ddd;
+    border-bottom: 1px solid #292929;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.person-list li:last-child {
+    border-bottom: none;
+}
+
+.period {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 7px 16px;
+    border-radius: 30px;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.contact-item {
+    padding: 20px;
+    background: var(--card);
+    border-radius: 8px;
+    border: 1px solid #292929;
+}
+
+.contact-item h3 {
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: var(--gray);
+}
+
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    border-top: 1px solid #292929;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+@media (max-width: 760px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 4%;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .org-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">KT RW 013.</div>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil</a>
+        <a href="#visi">Visi Misi</a>
+        <a href="#program">Program</a>
+        <a href="#struktur">Pengurus</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+<!-- BERANDA -->
+<section class="hero" id="beranda">
+    <div class="label">Unit Kerja Karang Taruna RW 013</div>
+
+    <h1>
+        Bergerak Bersama,<br>
+        <span>Membangun Generasi.</span>
+    </h1>
+
+    <p>
+        Selamat datang di website resmi Karang Taruna RW 013
+        Perumahan Kodam Mustikajaya. Kami adalah wadah bagi generasi
+        muda untuk tumbuh, berkarya, berkontribusi, dan menciptakan
+        perubahan positif bagi lingkungan serta masyarakat.
+    </p>
+
+    <a href="#profil" class="button">Kenali Organisasi Kami →</a>
+</section>
+
+<!-- PROFIL -->
+<section id="profil">
+    <div class="label">Tentang Kami</div>
+    <h2 class="section-title">Mengenal <span class="gold">Karang Taruna RW 013</span></h2>
+
+    <p class="section-desc">
+        Karang Taruna RW 013 merupakan organisasi kepemudaan yang
+        menjadi tempat berkumpulnya generasi muda untuk membangun
+        kebersamaan, mengembangkan potensi, serta berpartisipasi
+        aktif dalam kegiatan sosial dan pembangunan lingkungan.
+    </p>
+
+    <div class="about-grid">
+        <div class="card">
+            <h3>01. Kebersamaan</h3>
+            <p>
+                Membangun hubungan yang erat antarpemuda dan masyarakat
+                melalui semangat kekeluargaan, kepedulian, serta gotong royong.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>02. Pengembangan</h3>
+            <p>
+                Menjadi ruang bagi pemuda untuk mengembangkan kreativitas,
+                kemampuan, bakat, dan potensi diri.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>03. Pengabdian</h3>
+            <p>
+                Menghadirkan kegiatan yang bermanfaat, meningkatkan
+                kepedulian sosial, dan memberikan kontribusi nyata bagi lingkungan.
+            </p>
+        </div>
+    </div>
+
+    <div class="quote">
+        "Pemuda bukan hanya bagian dari masa depan, tetapi juga bagian
+        penting dari perubahan yang kita bangun hari ini."
+    </div>
+</section>
+
+<!-- VISI MISI -->
+<section class="dark-section" id="visi">
+    <div class="label">Arah dan Tujuan</div>
+    <h2 class="section-title">Visi & <span class="gold">Misi</span></h2>
+
+    <div class="about-grid">
+        <div class="card">
+            <h3>Visi</h3>
+            <p>
+                Mewujudkan generasi muda RW 013 yang aktif, kreatif,
+                berkarakter, peduli terhadap sesama, serta mampu
+                menjadi penggerak perubahan positif dalam masyarakat.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Misi</h3>
+            <ul>
+                <li>Mempererat persaudaraan dan kebersamaan pemuda.</li>
+                <li>Mengembangkan bakat melalui olahraga, seni, dan budaya.</li>
+                <li>Meningkatkan kepedulian sosial dan semangat gotong royong.</li>
+                <li>Mendukung kreativitas dan kemandirian ekonomi pemuda.</li>
+                <li>Membangun organisasi yang aktif, terbuka, dan bertanggung jawab.</li>
+                <li>Memanfaatkan media digital untuk menyebarkan informasi positif.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+    <div class="label">Kegiatan dan Kontribusi</div>
+    <h2 class="section-title">Program <span class="gold">Kerja</span></h2>
+
+    <p class="section-desc">
+        Berbagai bidang menjadi ruang untuk mengembangkan potensi pemuda
+        dan menghadirkan kegiatan yang bermanfaat bagi warga RW 013.
+    </p>
+
+    <div class="program-grid">
+        <div class="card">
+            <h3>Olahraga</h3>
+            <p>
+                Turnamen olahraga, pertandingan persahabatan, dan
+                kegiatan kebugaran untuk mempererat persatuan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Seni dan Budaya</h3>
+            <p>
+                Pentas seni, perlombaan, pelestarian budaya Indonesia,
+                dan pengembangan kreativitas generasi muda.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Kerohanian</h3>
+            <p>
+                Kegiatan keagamaan, pembinaan karakter, dan aktivitas
+                yang memperkuat nilai moral serta kebersamaan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sosial Masyarakat</h3>
+            <p>
+                Bakti sosial, kepedulian terhadap warga, gotong royong,
+                dan kegiatan kemasyarakatan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Media Publikasi</h3>
+            <p>
+                Dokumentasi kegiatan, publikasi informasi organisasi,
+                dan pengelolaan media digital Karang Taruna.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>UMKM</h3>
+            <p>
+                Mendukung usaha lokal, memperkenalkan produk warga,
+                dan membuka peluang pengembangan ekonomi kreatif.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Hukum</h3>
+            <p>
+                Mendorong kesadaran terhadap aturan organisasi,
+                ketertiban, dan tanggung jawab dalam bermasyarakat.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- STRUKTUR -->
+<section class="dark-section" id="struktur">
+    <div class="structure-heading">
+        <div class="label">Organisasi dan Kepemimpinan</div>
+
+        <h2>STRUKTUR KEPENGURUSAN</h2>
+
+        <p>
+            UNIT KERJA KARANG TARUNA RW 013<br>
+            Perumahan Kodam Mustikajaya
+        </p>
+
+        <div class="period">MASA BAKTI 2026–2031</div>
+    </div>
+
+    <!-- I. PELINDUNG -->
+    <div class="org-group">
+        <h3 class="org-group-title">I. Pelindung</h3>
+
+        <div class="org-grid">
+            <div class="person">
+                <div class="position">Pelindung</div>
+                <h4>Camat Mustikajaya</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Pelindung</div>
+                <h4>Lurah Mustikajaya</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Pelindung</div>
+                <h4>Ketua RW 13</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- II. PEMBINA -->
+    <div class="org-group">
+        <h3 class="org-group-title">II. Pembina</h3>
+
+        <div class="org-grid">
+            <div class="person">
+                <div class="position">Pembina</div>
+                <h4>Ketua RW 13</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Pembina</div>
+                <h4>Agus Rohman Soleh</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Pembina</div>
+                <h4>Hendra A.</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- III. PENASEHAT -->
+    <div class="org-group">
+        <h3 class="org-group-title">III. Penasehat</h3>
+
+        <div class="org-grid">
+            <div class="person">
+                <div class="position">Penasehat</div>
+                <h4>Eko Waluyo</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- IV. PENGURUS HARIAN -->
+    <div class="org-group">
+        <h3 class="org-group-title">IV. Pengurus Harian</h3>
+
+        <div class="org-grid">
+            <div class="person">
+                <div class="position">Ketua</div>
+                <h4>Fernando Wibisono</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Wakil Ketua I</div>
+                <h4>Mahardika Imani M.</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Sekretaris</div>
+                <h4>Rakhmat Fauzi F.</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Wakil Sekretaris I</div>
+                <h4>Muhamad Ilyas</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Bendahara</div>
+                <h4>Refi Panji Pratama</h4>
+            </div>
+
+            <div class="person">
+                <div class="position">Wakil Bendahara I</div>
+                <h4>Keysa Nur Fadiyah</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- V. BIDANG-BIDANG -->
+    <div class="org-group">
+        <h3 class="org-group-title">V. Bidang-Bidang</h3>
+
+        <div class="org-grid">
+
+            <div class="person-list">
+                <h4>A. Bidang Olahraga</h4>
+                <ul>
+                    <li><strong>Ketua:</strong> Pandu Hartawan</li>
+                    <li><strong>Anggota:</strong> Gery Saputra</li>
+                    <li>Aprilia Nur Aini</li>
+                    <li>Rahmat Oktino Prasetya</li>
+                </ul>
+            </div>
+
+            <div class="person-list">
+                <h4>B. Bidang Seni dan Budaya</h4>
+                <ul>
+                    <li><strong>Ketua:</strong> Alfira Putri Erita</li>
+                    <li><strong>Anggota:</strong> Raihan Zul Hermawan</li>
+                </ul>
+            </div>
+
+            <div class="person-list">
+                <h4>C. Bidang Kerohanian</h4>
+                <ul>
+                    <li><strong>Ketua:</strong> Rizki Wahyu S.</li>
+                    <li><strong>Anggota:</strong> Muhammad Ilyasa</li>
+                </ul>
+            </div>
+
+            <div class="person-list">
+                <h4>D. Bidang Humas dan Sosial Masyarakat</h4>
+                <ul>
+                    <li><strong>Ketua:</strong> M. Indra Setiawan</li>
+                    <li><strong>Anggota:</strong> Ulfah Widy Anisa</li>
+                </ul>
+            </div>
+
+            <div class="person-list">
+                <h4>E. Bidang Media Publikasi</h4>
+                <ul>
+                    <li><strong>Ketua:</strong> Satria Amar Yasir</li>
+                    <li><strong>Anggota:</strong> Amira Dwi Wulan</li>
+                    <li>Elang Cakra Magribi</li>
+                </ul>
+            </div>
+
+            <div class="person-list">
+                <h4>F. Bidang UMKM</h4>
+                <ul>
+                    <li><strong>Ketua:</strong> Betha Riana Umagapi</li>
+                    <li><strong>Anggota:</strong> Bilqiest Andara Putri</li>
+                    <li>Fejra Setiawan</li>
+                    <li>Maulana Ilham</li>
+                </ul>
+            </div>
+
+            <div class="person-list">
+                <h4>G. Bidang Hukum</h4>
+                <ul>
+                    <li><strong>Ketua:</strong> Najwa Syauffa Sachrir</li>
+                    <li><strong>Anggota:</strong> Muhammad Hanif AL Ikhwani</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="quote">
+        Satu organisasi, banyak potensi, satu tujuan:
+        membangun lingkungan yang lebih baik melalui kebersamaan,
+        kreativitas, dan pengabdian.
+    </div>
+</section>
+
+<!-- NILAI ORGANISASI -->
+<section id="nilai">
+    <div class="label">Prinsip Kami</div>
+    <h2 class="section-title">Bersama Menjadi <span class="gold">Lebih Baik</span></h2>
+
+    <div class="value-grid">
+        <div class="card">
+            <h3>Integritas</h3>
+            <p>Menjunjung kejujuran, tanggung jawab, dan komitmen.</p>
+        </div>
+
+        <div class="card">
+            <h3>Kolaborasi</h3>
+            <p>Menghargai perbedaan dan bekerja sama mencapai tujuan.</p>
+        </div>
+
+        <div class="card">
+            <h3>Kreativitas</h3>
+            <p>Membuka ruang bagi ide baru dan potensi setiap pemuda.</p>
+        </div>
+
+        <div class="card">
+            <h3>Kepedulian</h3>
+            <p>Menumbuhkan semangat saling membantu dan mengabdi.</p>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section class="dark-section" id="kontak">
+    <div class="label">Terhubung dengan Kami</div>
+    <h2 class="section-title">Mari <span class="gold">Bergerak Bersama</span></h2>
+
+    <p class="section-desc">
+        Karang Taruna RW 013 terbuka untuk kolaborasi, ide,
+        dan partisipasi positif dari masyarakat. Bersama-sama,
+        kita dapat menciptakan lingkungan yang lebih aktif,
+        peduli, dan penuh kesempatan bagi generasi muda.
+    </p>
+
+    <div class="contact-grid">
+        <div class="contact-item">
+            <h3>Lokasi</h3>
+            <p>Perumahan Kodam Mustikajaya</p>
+            <p>Kelurahan Mustikajaya, Kecamatan Mustikajaya, Kota Bekasi</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>Organisasi</h3>
+            <p>Unit Kerja Karang Taruna RW 013</p>
+            <p>Masa Bakti 2026–2031</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>Media Sosial</h3>
+            <p>Instagram: tambahkan akun resmi di sini</p>
+            <p>Email: tambahkan email organisasi di sini</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>
+        © 2026 <span>Karang Taruna RW 013</span>.
+        Dibangun dengan semangat kebersamaan dan pengabdian.
+    </p>
+</footer>
+
+</body>
+</html>
